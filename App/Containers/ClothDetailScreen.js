@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView, KeyboardAvoidingView, Image } from 'react-native'
+import { ScrollView, KeyboardAvoidingView, Image, View } from 'react-native'
 import { connect } from 'react-redux'
 import { clothImage } from '../Images/ignite_logo.png'
 import { Text } from 'react-native-elements';
@@ -13,10 +13,10 @@ class ClothDetailScreen extends Component {
   render () {
     return (
       <ScrollView style={styles.container}>
-        <KeyboardAvoidingView behavior='position'>
-          <Image source={require('../Images/ignite_logo.png')} style={{ width: '80%', height: 200, borderRadius: 20 }} />
-          <Text style={styles.title}>Name</Text>
-        </KeyboardAvoidingView>
+        <View style={styles.center}>
+          <Image source={require('../Images/ignite_logo.png')} style={styles.img} />
+        </View>
+        <Text style={styles.title}>Name</Text>
       </ScrollView>
     )
   }
