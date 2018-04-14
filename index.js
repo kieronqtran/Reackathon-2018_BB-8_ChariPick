@@ -7,5 +7,4 @@ const Entrypoint =
     ? require('./storybook').default
     : require('./App/Containers/App').default
 
-
 AppRegistry.registerComponent('Reackathon2018BB8ChariPick', () => Entrypoint)

@@ -7,26 +7,25 @@ import styles from '../Containers/Styles/LaunchScreenStyles'
 import ListClothes from './ListClothes'
 
 export default class HomePage extends Component {
+  
 	ava = () => {
 		return(
 			<Icon name='user' type='evil-cons'/>
 		)
-	}
+  }
+
 	render() {
 		return (
-			<View >
-				<Header 
-		          leftComponent={{icon:'account-circle', color: '#fff'}}
-		          centerComponent={{text: "Chari Pick", style:{ color: '#fff', fontSize:22, fontFamily:'sans-serif-dense'}}}
+			<View>
+				<Header
+		          leftComponent={{icon:'home', color: '#fff'}}
+		          centerComponent={{text: "Chari Pick", style:{ color: '#fff', fontSize:22}}}
 		          backgroundColor='maroon'
-		          rightComponent={{icon:'add', color:'#fff'}}
 		          />
-		          
-				<ListClothes/>
+				<ListClothes  data={this.props.data} onEachItemPress={this.props.onEachItemPress}/>
+			</View>
 
-			</View>			
-		    
-		    
+
 		)
 	}
 }
