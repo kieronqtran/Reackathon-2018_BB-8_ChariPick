@@ -1,5 +1,5 @@
 import './App/Config/ReactotronConfig'
-import Expo from 'expo'
+import { AppRegistry } from 'react-native'
 import DebugConfig from './App/Config/DebugConfig'
 
 const Entrypoint =
@@ -7,4 +7,5 @@ const Entrypoint =
     ? require('./storybook').default
     : require('./App/Containers/App').default
 
-Expo.registerRootComponent(Entrypoint)
+
+AppRegistry.registerComponent('Reackathon2018BB8ChariPick', () => Entrypoint)
