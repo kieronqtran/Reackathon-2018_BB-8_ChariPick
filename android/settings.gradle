@@ -1,0 +1,3 @@
+rootProject.name = 'Reackathon2018BB8ChariPick'
+
+include ':app'
