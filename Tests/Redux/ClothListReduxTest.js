@@ -1,15 +1,15 @@
-import Actions, { reducer, INITIAL_STATE } from '../../App/Redux/ClothRedux'
+import Actions, { reducer, INITIAL_STATE } from '../../App/Redux/ClothListRedux'
 
 test('request', () => {
-  const state = reducer(INITIAL_STATE, Actions.clothRequest())
+  const state = reducer(INITIAL_STATE, Actions.clothListRequest())
 
   expect(state.fetching).toBe(true)
   expect(state.error).toBeNull()
-  expect(state.entity).toBeNull()
+  expect(state.entities).toBeNull()
 })
 
 test('success', () => {
-  const cloth =
+  const clothes = [
     {
         "id": 1,
         "name": "Item Number 1",
@@ -21,18 +21,19 @@ test('success', () => {
             "name": "Sierra Altenwerth",
             "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/haruintesettden/128.jpg"
         }
-    };
-  const state = reducer(INITIAL_STATE, Actions.clothSuccess(cloth))
+    },
+  ];
+  const state = reducer(INITIAL_STATE, Actions.clothListSuccess(clothes))
 
   expect(state.fetching).toBe(false)
-  expect(state.entity).toEqual(cloth)
+  expect(state.entities).toEqual(clothes)
   expect(state.error).toBeNull()
 })
 
 test('failure', () => {
-  const state = reducer(INITIAL_STATE, Actions.clothFailure())
+  const state = reducer(INITIAL_STATE, Actions.clothListFailure())
 
   expect(state.fetching).toBe(false)
   expect(state.error).toBe(true)
-  expect(state.entity).toBeNull()
+  expect(state.entities).toBeNull()
 })
