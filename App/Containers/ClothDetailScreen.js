@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { ScrollView, Image, View, LayoutAnimation } from 'react-native'
+import { ScrollView, Image, View, LayoutAnimation, Text, KeyboardAvoidingView  } from 'react-native'
 import { connect } from 'react-redux'
 import { Text, Icon } from 'react-native-elements';
-// Add Actions - replace 'Your' with whatever your reducer is called :)
-// import YourActions from '../Redux/YourRedux'
+import ClothActions from '../Redux/ClothRedux'
 
 // Styles
 import styles from './Styles/ClothDetailScreenStyle'
@@ -16,6 +15,13 @@ class ClothDetailScreen extends Component {
     };
   }
 
+  componentDidMount() {
+    // Get the default state
+
+    const { params } = this.props.navigation.state
+    this.props.getItem(parseInt(params.itemId))
+  }
+  
   render () {
     const { favourite } = this.state;
 
@@ -71,11 +77,13 @@ class ClothDetailScreen extends Component {
 
 const mapStateToProps = (state) => {
   return {
+    data: state.cloth.entity
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    getItem: (id) => dispatch(ClothActions.clothRequest(id))
   }
 }
 
