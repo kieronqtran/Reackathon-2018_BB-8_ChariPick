@@ -6,11 +6,13 @@ import { Button, Header } from 'react-native-elements'
 import styles from './Styles/LaunchScreenStyles'
 import ListClothes from '../Components/ListClothes'
 import UserRow from '../Components/UserRow'
+import HomePage from '../Components/HomePage'
+import YourClothes from '../Components/YourClothes'
 
 export default class LaunchScreen extends Component {
   render () {
     return (
-      <ListClothes/>
+      <HomePage/>
     )
   }
 }
