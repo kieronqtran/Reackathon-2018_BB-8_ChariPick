@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { ScrollView, Image, View, LayoutAnimation, Text, KeyboardAvoidingView  } from 'react-native'
+import { ScrollView, Image, View, LayoutAnimation, KeyboardAvoidingView  } from 'react-native'
 import { connect } from 'react-redux'
-import { Text, Icon } from 'react-native-elements';
+import { Text, Icon } from 'react-native-elements'
 import ClothActions from '../Redux/ClothRedux'
 
 // Styles
@@ -21,7 +21,7 @@ class ClothDetailScreen extends Component {
     const { params } = this.props.navigation.state
     this.props.getItem(parseInt(params.itemId))
   }
-  
+
   render () {
     const { favourite } = this.state;
 
@@ -30,7 +30,7 @@ class ClothDetailScreen extends Component {
 
         <Image source={require('../Images/ignite_logo.png')} style={styles.img} />
         <View style={{ flexDirection: 'row'}}>
-            <Text style={styles.title}>Name</Text>
+            <Text style={styles.title}>{this.props.data.name}</Text>
             <View justifyContent="center" style={{ right: 60 }}>
               <Icon
                 name={favourite ? 'heart' : 'heart-o'}
@@ -44,7 +44,7 @@ class ClothDetailScreen extends Component {
         </View>
 
         <Text style={styles.subTitle}>DESCRIPTION</Text>
-        <Text style={styles.info}>The description of the item will be inserted here</Text>
+        <Text style={styles.info}>{this.props.data.description}</Text>
 
         <Text style={styles.subTitle}>INFO</Text>
         <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', flex: 1}}>
@@ -54,8 +54,8 @@ class ClothDetailScreen extends Component {
             <Text style={styles.infoLeft}>Condition   </Text>
           </View>
           <View>
-            <Text style={styles.infoRight}>M</Text>
-            <Text style={styles.infoRight}>Beige</Text>
+            <Text style={styles.infoRight}>{this.props.data.size}</Text>
+            <Text style={styles.infoRight}>{this.props.data.color}</Text>
             <Text style={styles.infoRight}>80%</Text>
           </View>
           <Text>                  </Text>
@@ -77,7 +77,20 @@ class ClothDetailScreen extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    data: state.cloth.entity
+    data: state.cloth.entity ||
+    {
+        "id": 0,
+        "name": "",
+        "description": "",
+        "size": "",
+        "color": "",
+        "imageUrl": "https://via.placeholder.com/140x140",
+        "user": {
+            "id": 0,
+            "name": "",
+            "avatarUrl": ""
+        }
+    }
   }
 }
 

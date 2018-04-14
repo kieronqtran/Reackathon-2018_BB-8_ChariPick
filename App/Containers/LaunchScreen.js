@@ -23,7 +23,7 @@ class LaunchScreen extends Component {
   render () {
     return (
       // !this.props.loading ? <ListClothes data={this.props.data} onEachItemPress={this.onPress}/>: <Text>Loading...</Text>
-      <HomePage/>
+      <HomePage data={this.props.data} onEachItemPress={this.onPress}/>
     )
   }
 }
