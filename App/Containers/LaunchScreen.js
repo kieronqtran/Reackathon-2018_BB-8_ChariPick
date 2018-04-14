@@ -12,7 +12,7 @@ import YourClothes from '../Components/YourClothes'
 export default class LaunchScreen extends Component {
   render () {
     return (
-      <YourClothes/>
+      <HomePage/>
     )
   }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { View, Alert, TouchableHighlight } from 'react-native'
-
 import { Avatar, Text, Badge } from 'react-native-elements'
 
 export default class UserRow extends Component {
