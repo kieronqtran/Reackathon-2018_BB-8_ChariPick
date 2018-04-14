@@ -23,8 +23,9 @@ export default class YourClothes extends Component {
 		return(
 			<View>
 				<Header 
-		          centerComponent={{text: "Your store", style:{ color: '#fff', fontSize:22}}}
-		          backgroundColor='maroon'/>
+					leftComponent={{icon:'home', color: '#fff'}}
+			        centerComponent={{text: "Your store", style:{ color: '#fff', fontSize:22}}}
+			        backgroundColor='maroon'/>
 		        <UserRow/>
 	        	<ButtonGroup 
 					onPress={this._updateSelected} 
