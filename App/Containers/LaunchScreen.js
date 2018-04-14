@@ -8,6 +8,8 @@ import ClothListActions from '../Redux/ClothListRedux'
 import styles from './Styles/LaunchScreenStyles'
 import ListClothes from '../Components/ListClothes'
 import UserRow from '../Components/UserRow'
+import HomePage from '../Components/HomePage'
+import YourClothes from '../Components/YourClothes'
 
 class LaunchScreen extends Component {
 
@@ -20,7 +22,8 @@ class LaunchScreen extends Component {
   }
   render () {
     return (
-      !this.props.loading ? <ListClothes data={this.props.data} onEachItemPress={this.onPress}/>: <Text>Loading...</Text>
+      // !this.props.loading ? <ListClothes data={this.props.data} onEachItemPress={this.onPress}/>: <Text>Loading...</Text>
+      <HomePage/>
     )
   }
 }
