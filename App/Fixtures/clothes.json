@@ -1,0 +1,132 @@
+[
+  {
+      "id": 1,
+      "name": "Item Number 1",
+      "description": "Sint velit ut omnis quod molestiae tempora esse omnis dignissimos amet molestias aliquid voluptatum maiores id reprehenderit vel omnis minima.",
+      "size": "M",
+      "color": "Navy",
+      "imageUrl": "http://lorempixel.com/140/140/fashion",
+      "user": {
+          "id": 1,
+          "name": "Matt Shields",
+          "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/wake_gs/128.jpg"
+      }
+  },
+  {
+      "id": 2,
+      "name": "Item Number 2",
+      "description": "Aspernatur rerum ut nulla suscipit cum consequatur odit maiores dolorem esse quasi cum asperiores laborum sint quos sed non voluptate.",
+      "size": "L",
+      "color": "Purple",
+      "imageUrl": "http://lorempixel.com/140/140/fashion",
+      "user": {
+          "id": 2,
+          "name": "Chris Nitzsche",
+          "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/michigangraham/128.jpg"
+      }
+  },
+  {
+      "id": 3,
+      "name": "Item Number 3",
+      "description": "Quis rerum minima facilis dolorem quis maiores voluptatum sit non consectetur ullam dolores qui voluptas nemo qui tempora minima est.",
+      "size": "S",
+      "color": "Blue",
+      "imageUrl": "http://lorempixel.com/140/140/fashion",
+      "user": {
+          "id": 3,
+          "name": "Kris Rice",
+          "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/h1brd/128.jpg"
+      }
+  },
+  {
+      "id": 4,
+      "name": "Item Number 4",
+      "description": "Voluptatum quia ea voluptas dolores deleniti odit qui et consequatur autem excepturi ut eveniet veniam distinctio qui error amet illum.",
+      "size": "XL",
+      "color": "Purple",
+      "imageUrl": "http://lorempixel.com/140/140/fashion",
+      "user": {
+          "id": 4,
+          "name": "Makenzie Legros",
+          "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/donjain/128.jpg"
+      }
+  },
+  {
+      "id": 5,
+      "name": "Item Number 5",
+      "description": "Cupiditate at voluptate recusandae nostrum dolor voluptatem illum eos sit nostrum dolor dolorem id repellat perspiciatis non voluptatem ipsam dolor.",
+      "size": "M",
+      "color": "Red",
+      "imageUrl": "http://lorempixel.com/140/140/fashion",
+      "user": {
+          "id": 5,
+          "name": "Murl O'Connell",
+          "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/d00maz/128.jpg"
+      }
+  },
+  {
+      "id": 6,
+      "name": "Item Number 6",
+      "description": "Voluptas repellat doloribus doloremque consectetur laudantium vel corrupti ea non porro consectetur itaque velit dignissimos corporis ut aut laborum dignissimos.",
+      "size": "L",
+      "color": "Red",
+      "imageUrl": "http://lorempixel.com/140/140/fashion",
+      "user": {
+          "id": 6,
+          "name": "Susan Orn",
+          "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/sergeyalmone/128.jpg"
+      }
+  },
+  {
+      "id": 7,
+      "name": "Item Number 7",
+      "description": "Consequatur ut saepe in dolorem provident iste natus veniam debitis dolor rerum maxime qui sapiente et id iure deleniti laboriosam.",
+      "size": "L",
+      "color": "Purple",
+      "imageUrl": "http://lorempixel.com/140/140/fashion",
+      "user": {
+          "id": 7,
+          "name": "Macie Cummings",
+          "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/y2graphic/128.jpg"
+      }
+  },
+  {
+      "id": 8,
+      "name": "Item Number 8",
+      "description": "Laboriosam reprehenderit voluptates minus quis eum repudiandae qui aut nostrum ut sit dignissimos dolorem dolorem quo nulla id nihil voluptatum.",
+      "size": "S",
+      "color": "Purple",
+      "imageUrl": "http://lorempixel.com/140/140/fashion",
+      "user": {
+          "id": 8,
+          "name": "Dewayne Trantow",
+          "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/renbyrd/128.jpg"
+      }
+  },
+  {
+      "id": 9,
+      "name": "Item Number 9",
+      "description": "Quia natus et unde nesciunt nesciunt quisquam nesciunt autem quia voluptatem sit ducimus quos rerum enim animi consequatur et aperiam.",
+      "size": "XL",
+      "color": "Red",
+      "imageUrl": "http://lorempixel.com/140/140/fashion",
+      "user": {
+          "id": 9,
+          "name": "Friedrich Buckridge",
+          "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/saschadroste/128.jpg"
+      }
+  },
+  {
+      "id": 10,
+      "name": "Item Number 10",
+      "description": "Vero officia quaerat consequuntur voluptatem doloribus numquam recusandae nemo ut est dolor voluptatem doloremque ut iste optio aut soluta minima.",
+      "size": "XL",
+      "color": "Navy",
+      "imageUrl": "http://lorempixel.com/140/140/fashion",
+      "user": {
+          "id": 10,
+          "name": "Millie Hilll",
+          "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/jarsen/128.jpg"
+      }
+  }
+]
