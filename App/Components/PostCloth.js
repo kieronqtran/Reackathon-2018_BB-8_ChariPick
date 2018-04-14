@@ -23,15 +23,16 @@ export default class PostCloth extends Component {
 		this.onChangeCondition = this.onChangeCondition.bind(this)
 	}
 
-	onChangeName = (name) => this.setState({name});
-	onChangeSize = (size) => this.setState({size});
-	onChangeDescription = (description) => this.setState({description});
-	onChangeColor = (color) => this.setState({color});
-	onChangeCondition = (condition) => this.setState({condition});
+	onChangeName = (name) => this.setState({name})
+	onChangeSize = (size) => this.setState({size})
+	onChangeDescription = (description) => this.setState({description})
+	onChangeColor = (color) => this.setState({color})
+	onChangeCondition = (condition) => this.setState({condition})
 	onSubmit = () => Alert.alert("Thanks for posting your cloth")
+	onUploadImage = () => Alert.alert("Upload Image")
 
 	render() {
-		const {name, description, size, color, condition} = this.state
+		const {name, imageUrl, description, size, color, condition} = this.state
 		return (
 			
 			<View >
@@ -51,15 +52,28 @@ export default class PostCloth extends Component {
 		        	<FormInput onChangeText={this.onChangeColor}/>
 		        	<FormLabel style={{fontFamily:'sans-serif-dense'}} >Condition</FormLabel>
 		        	<FormInput onChangeText={this.onChangeCondition}/>
-		        	<FormLabel style={{fontFamily:'sans-serif-dense'}} >Image</FormLabel>
+		        	<View style={{flexDirection: 'row'}}>
+		        		<FormLabel style={{fontFamily:'sans-serif-dense'}} >Image</FormLabel>
+			        	<Button 
+				        	small
+				        	title="Upload Image" 
+				        	iconRight={{name: 'image', type: 'evilicons'}}
+				        	onPress={this.onUploadImage}
+				        	borderRadius={90}
+				        />
+		        	</View>
+		        	
 		        </View>
-		        <Button 
-		        	style={{top: 10}}
-		        	small
-		        	title="Submit" 
-		        	iconRight={{name: 'send-o', type: 'font-awesome'}}
-		        	onPress={this.onSubmit}
-		        />
+		        <View style={{top: 20}}>
+			        <Button 	
+			        	small
+			        	title="Submit" 
+			        	iconRight={{name: 'send-o', type: 'font-awesome'}}
+			        	onPress={this.onSubmit}
+			        	backgroundColor="maroon"
+			        	borderRadius={90}
+			        />
+		        </View>
 			</View>
 		)
 	}

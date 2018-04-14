@@ -16,10 +16,10 @@ export default class HomePage extends Component {
 		return (
 			<View >
 				<Header 
-		          leftComponent={{icon:'home', color: '#fff'}}
+		          leftComponent={{icon:'account-circle', color: '#fff'}}
 		          centerComponent={{text: "Chari Pick", style:{ color: '#fff', fontSize:22, fontFamily:'sans-serif-dense'}}}
 		          backgroundColor='maroon'
-		          
+		          rightComponent={{icon:'add', color:'#fff'}}
 		          />
 		          
 				<ListClothes/>
