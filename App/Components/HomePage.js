@@ -14,10 +14,10 @@ export default class HomePage extends Component {
 	}
 	render() {
 		return (
-			<View>
+			<View >
 				<Header 
 		          leftComponent={{icon:'home', color: '#fff'}}
-		          centerComponent={{text: "Chari Pick", style:{ color: '#fff', fontSize:22}}}
+		          centerComponent={{text: "Chari Pick", style:{ color: '#fff', fontSize:22, fontFamily:'sans-serif-dense'}}}
 		          backgroundColor='maroon'
 		          
 		          />

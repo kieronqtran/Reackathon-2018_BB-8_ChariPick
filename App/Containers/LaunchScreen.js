@@ -8,11 +8,12 @@ import ListClothes from '../Components/ListClothes'
 import UserRow from '../Components/UserRow'
 import HomePage from '../Components/HomePage'
 import YourClothes from '../Components/YourClothes'
+import PostCloth from '../Components/PostCloth'
 
 export default class LaunchScreen extends Component {
   render () {
     return (
-      <YourClothes/>
+      <PostCloth/>
     )
   }
 }
