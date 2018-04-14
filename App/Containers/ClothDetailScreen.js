@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { ScrollView, KeyboardAvoidingView, Image, View } from 'react-native'
+import { ScrollView, Image, View, LayoutAnimation } from 'react-native'
 import { connect } from 'react-redux'
-import { clothImage } from '../Images/ignite_logo.png'
-import { Text } from 'react-native-elements';
+import { Text, Icon } from 'react-native-elements';
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
@@ -10,13 +9,61 @@ import { Text } from 'react-native-elements';
 import styles from './Styles/ClothDetailScreenStyle'
 
 class ClothDetailScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      favourite: false
+    };
+  }
+
   render () {
+    const { favourite } = this.state;
+
     return (
       <ScrollView style={styles.container}>
-        <View style={styles.center}>
-          <Image source={require('../Images/ignite_logo.png')} style={styles.img} />
+
+        <Image source={require('../Images/ignite_logo.png')} style={styles.img} />
+        <View style={{ flexDirection: 'row'}}>
+            <Text style={styles.title}>Name</Text>
+            <View justifyContent="center" style={{ right: 60 }}>
+              <Icon
+                name={favourite ? 'heart' : 'heart-o'}
+                type='font-awesome'
+                color={favourite ? '#F44336' : 'rgb(50,50,50)'}
+                size={30}
+
+                onPress={() => this.setState({ favourite: !favourite })}
+                />
+              </View>
         </View>
-        <Text style={styles.title}>Name</Text>
+
+        <Text style={styles.subTitle}>DESCRIPTION</Text>
+        <Text style={styles.info}>The description of the item will be inserted here</Text>
+
+        <Text style={styles.subTitle}>INFO</Text>
+        <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row', flex: 1}}>
+          <View>
+            <Text style={styles.infoLeft}>Size    </Text>
+            <Text style={styles.infoLeft}>Color   </Text>
+            <Text style={styles.infoLeft}>Condition   </Text>
+          </View>
+          <View>
+            <Text style={styles.infoRight}>M</Text>
+            <Text style={styles.infoRight}>Beige</Text>
+            <Text style={styles.infoRight}>80%</Text>
+          </View>
+          <Text>                  </Text>
+          <View>
+            <Text style={styles.infoLeft}>City    </Text>
+            <Text style={styles.infoLeft}>Purpose   </Text>
+            <Text style={styles.infoLeft}>Condition   </Text>
+          </View>
+          <View>
+            <Text style={styles.infoRight}>HCMC</Text>
+            <Text style={styles.infoRight}>Charity</Text>
+            <Text style={styles.infoRight}>80%</Text>
+          </View>
+        </View>
       </ScrollView>
     )
   }

@@ -5,12 +5,13 @@ import { Button } from 'react-native-elements'
 // import Icon from 'react-native-vector-icons/FontAwesome'
 // Styles
 import styles from './Styles/LaunchScreenStyles'
-import ClothDetailScreen from "./ClothDetailScreen";
+import InterestedUser from "./InterestedUser";
+
 export default class LaunchScreen extends Component {
   render () {
     return (
       <View style={styles.mainContainer}>
-      <ClothDetailScreen/>
+        <InterestedUser/>
       </View>
     )
   }
