@@ -1,9 +1,8 @@
 import Picture from './Picture'
 import React, { Component } from 'react'
 import { AppRegistry, FlatList, StyleSheet, View } from 'react-native'
-import { ListItems } from 'react-native-elements'
+import { ListItems, Header } from 'react-native-elements'
 import styles from '../Containers/Styles/LaunchScreenStyles'
-import { Header } from 'react-native-elements'
 
 export default class ListClothes extends Component {
 	
@@ -19,10 +18,7 @@ export default class ListClothes extends Component {
 
 	render() {
 		return (
-			<View style={styles.mainContainer}>
-		        <Header 
-		          centerComponent={{text: "Chari Pick", style:{ color: '#fff', fontSize:30}}}
-		          backgroundColor='maroon'/>
+			<View>
 		        <FlatList
 					numColumns={2}
 					data={this.state.clothList}
