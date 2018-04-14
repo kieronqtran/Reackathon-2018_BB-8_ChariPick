@@ -4,7 +4,7 @@ import Immutable from 'seamless-immutable'
 /* ------------- Types and Action Creators ------------- */
 
 const { Types, Creators } = createActions({
-  clothRequest: null, // should add parameters to the action
+  clothRequest: ['id'], // should add parameters to the action
   clothSuccess: ['cloth'],
   clothFailure: null,
 })
@@ -22,14 +22,14 @@ export const INITIAL_STATE = Immutable({
 
 /* ------------- Selectors ------------- */
 
-export const ClothListSelectors = {
+export const ClothSelectors = {
   selectCloth: state => state.entity
 }
 
 /* ------------- Reducers ------------- */
 
 // request the avatar for a user
-export const request = (state, { }) =>
+export const request = (state, { id }) =>
   state.merge({ fetching: true })
 
 // successful avatar lookup

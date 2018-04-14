@@ -6,12 +6,11 @@ import styles from '../Containers/Styles/LaunchScreenStyles'
 import { Header } from 'react-native-elements'
 
 export default class ListClothes extends Component {
-	
+
 	constructor(props) {
-		const clothes = require('../Fixtures/clothes.json')
 		super(props)
 		this.state = {
-			clothList: clothes
+			clothList: props.data
 		}
 	}
 
@@ -20,18 +19,18 @@ export default class ListClothes extends Component {
 	render() {
 		return (
 			<View style={styles.mainContainer}>
-		        <Header 
+		        <Header
 		          centerComponent={{text: "Chari Pick", style:{ color: '#fff', fontSize:30}}}
 		          backgroundColor='maroon'/>
 		        <FlatList
 					numColumns={2}
 					data={this.state.clothList}
-					renderItem={({item}) => (<Picture  item_id={item.id.toString()} imageUrl={item.imageUrl}/>)}
+					renderItem={({item}) => (<Picture  item_id={item.id.toString()} onPress={this.props.onEachItemPress} imageUrl={item.imageUrl}/>)}
 					keyExtractor={this._keyExtractor}
 				/>
 		    </View>
-			
-			
+
+
 		)
 	}
 }
