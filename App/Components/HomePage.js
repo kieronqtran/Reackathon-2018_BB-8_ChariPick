@@ -18,7 +18,7 @@ export default class HomePage extends Component {
 		return (
 			<View>
 				<Header
-		          leftComponent={{icon:'home', color: '#fff'}}
+		          leftComponent={{icon:'home', color: '#fff', onPress: this.props.onPressOfLeftButton}}
 		          centerComponent={{text: "Chari Pick", style:{ color: '#fff', fontSize:22}}}
 		          backgroundColor='maroon'
 		          />

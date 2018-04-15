@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import { Button, Header } from 'react-native-elements'
-import { ScrollView, Text, Image, View, Alert } from 'react-native'
-import { Button, Header } from 'react-native-elements'
 import { connect } from "react-redux";
 // import Icon from 'react-native-vector-icons/FontAwesome'
 // Styles
@@ -11,7 +9,6 @@ import styles from './Styles/LaunchScreenStyles'
 import ListClothes from '../Components/ListClothes'
 import UserRow from '../Components/UserRow'
 import HomePage from '../Components/HomePage'
-import YourClothes from '../Components/YourClothes'
 
 class LaunchScreen extends Component {
 
@@ -22,10 +19,15 @@ class LaunchScreen extends Component {
   onPress = (event, { itemId }) => {
     this.props.navigation.navigate('ClothDetailScreen', { itemId })
   }
+
+  onPressOfLeftButton = () => {
+    this.props.navigation.navigate('InterestedUserScreen')
+  }
+
   render () {
     return (
       // !this.props.loading ? <ListClothes data={this.props.data} onEachItemPress={this.onPress}/>: <Text>Loading...</Text>
-      <HomePage data={this.props.data} onEachItemPress={this.onPress}/>
+      <HomePage data={this.props.data} onEachItemPress={this.onPress} onPressOfLeftButton={this.onPressOfLeftButton} />
     )
   }
 }
