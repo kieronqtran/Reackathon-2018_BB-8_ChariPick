@@ -7,7 +7,7 @@ export default StyleSheet.create({
   img: {
     width: '100%',
     height: 250,
-    marginTop: 30
+    marginTop: 10,
   },
 
   title: {
