@@ -7,7 +7,7 @@ import styles from '../Containers/Styles/LaunchScreenStyles'
 import ListClothes from './ListClothes'
 
 export default class HomePage extends Component {
-
+  
 	ava = () => {
 		return(
 			<Icon name='user' type='evil-cons'/>
