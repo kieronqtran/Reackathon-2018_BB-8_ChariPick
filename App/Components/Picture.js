@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
 import { View, Text, TouchableHighlight, Alert, Image, Dimensions } from 'react-native'
 
+import PropTypes from 'prop-types'
+
 const {width, height} = Dimensions.get('window')
 
 export default class Picture extends React.Component {
+
+  static propTypes = {
+
+  }
 
 	constructor(props) {
 		super(props)
@@ -11,14 +17,11 @@ export default class Picture extends React.Component {
 			uri: props.imageUrl,
 			key: props.item_id
 		}
-		
 		this.height = height/2.5
-	}
+  }
 
-		
-
-	onPress = () => {
-		Alert.alert(this.state.uri)
+	onPress = (event) => {
+    this.props.onPress(event, { itemId: this.state.key })
 	}
 
 	render () {
@@ -31,7 +34,6 @@ export default class Picture extends React.Component {
 	  			/>
 			</TouchableHighlight>
 	  	</View>
-		
 	  )
     }
 }
