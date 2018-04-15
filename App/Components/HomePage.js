@@ -18,9 +18,10 @@ export default class HomePage extends Component {
 		return (
 			<View style={{flex: 1}}>
 				<Header
-		          leftComponent={{icon:'home', color: '#fff', onPress: this.props.onPressOfLeftButton}}
+		          leftComponent={{icon: 'account-circle', color: '#fff', onPress: this.props.onPressOfLeftButton}}
 		          centerComponent={{text: "Chari Pick", style:{ color: '#fff', fontSize:22, fontFamily:"sans-serif-thin"}}}
-		          backgroundColor='maroon'
+              rightComponent={{ icon: 'add', color: '#fff', onPress: this.props.onPressOfRightButton }}
+              backgroundColor='maroon'
 		          />
 				<ListClothes  data={this.props.data} onEachItemPress={this.props.onEachItemPress}/>
 			</View>

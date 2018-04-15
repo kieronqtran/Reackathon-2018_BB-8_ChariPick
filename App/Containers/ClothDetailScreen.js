@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView, Image, View, LayoutAnimation, KeyboardAvoidingView  } from 'react-native'
+import { ScrollView, Image, View, LayoutAnimation, KeyboardAvoidingView, Alert  } from 'react-native'
 import { connect } from 'react-redux'
 import { Text, Icon, Header } from 'react-native-elements'
 import ClothActions from '../Redux/ClothRedux'
@@ -46,7 +46,13 @@ class ClothDetailScreen extends Component {
                   type='font-awesome'
                   color={favourite ? '#F44336' : 'rgb(50,50,50)'}
                   size={30}
-                  onPress={() => this.setState({ favourite: !favourite })}
+                  onPress={() => {
+                      this.setState({ favourite: !favourite })
+                      if(!favourite){
+                        Alert.alert("Enter your motivation here", "Why you want this cloth?")
+                      }
+                    }
+                  }
                   />
                 </View>
           </View>

@@ -21,12 +21,19 @@ class LaunchScreen extends Component {
   }
 
   onPressOfLeftButton = () => {
-    this.props.navigation.navigate('InterestedUserScreen')
+    this.props.navigation.navigate('YourClothScreen')
   }
-  
+
+  onPressOfRightButton = () =>
+    this.props.navigation.navigate('PostClothScreen')
+
   render () {
     return (
-        <HomePage data={this.props.data} onEachItemPress={this.onPress} onPressOfLeftButton={this.onPressOfLeftButton} />
+        <HomePage
+         data={this.props.data}
+         onEachItemPress={this.onPress}
+         onPressOfLeftButton={this.onPressOfLeftButton}
+         onPressOfRightButton={this.onPressOfRightButton} />
 
     )
   }

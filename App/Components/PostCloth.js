@@ -34,10 +34,10 @@ export default class PostCloth extends Component {
 	render() {
 		const {name, imageUrl, description, size, color, condition} = this.state
 		return (
-			
+
 			<View >
-				<Header 
-		          leftComponent={{icon:'arrow-back', color: '#fff'}}
+				<Header
+		          leftComponent={{icon:'arrow-back', color: '#fff',onPress: this.props.onPressOfLeftButton}}
 		          centerComponent={{text: "Post", style:{ color: '#fff', fontSize:22, fontFamily:'sans-serif-dense'}}}
 		          backgroundColor='maroon'
 		        />
@@ -54,20 +54,20 @@ export default class PostCloth extends Component {
 		        	<FormInput onChangeText={this.onChangeCondition}/>
 		        	<View style={{flexDirection: 'row'}}>
 		        		<FormLabel style={{fontFamily:'sans-serif-dense'}} >Image</FormLabel>
-			        	<Button 
+			        	<Button
 				        	small
-				        	title="Upload Image" 
+				        	title="Upload Image"
 				        	iconRight={{name: 'image', type: 'evilicons'}}
 				        	onPress={this.onUploadImage}
 				        	borderRadius={90}
 				        />
 		        	</View>
-		        	
+
 		        </View>
 		        <View style={{top: 20}}>
-			        <Button 	
+			        <Button
 			        	small
-			        	title="Submit" 
+			        	title="Submit"
 			        	iconRight={{name: 'send-o', type: 'font-awesome'}}
 			        	onPress={this.onSubmit}
 			        	backgroundColor="maroon"

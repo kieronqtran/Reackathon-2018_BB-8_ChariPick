@@ -18,24 +18,24 @@ export default class YourClothes extends Component {
 
 	render() {
 		const { selectedIndex } = this.state
-		const buttons = ['Free', 'Trade', 'Taken']
+		const buttons = ['Give away', 'Trade', 'History']
 
 		return(
 			<View>
-				<Header 
-					leftComponent={{icon:'arrow-back', color: '#fff'}}
+				<Header
+					    leftComponent={{icon:'arrow-back', color: '#fff', onPress: this.props.onPressOfLeftButton}}
 			        centerComponent={{text: "Your store", style:{ fontFamily:'sans-serif-dense', color: '#fff', fontSize:22}}}
 			        backgroundColor='maroon'/>
 		        <UserRow/>
-	        	<ButtonGroup 
-					onPress={this._updateSelected} 
-					selectedButtonStyle={{backgroundColor: 'maroon'}}  
-					selectedTextStyle={{fontFamily:'sans-serif-thin', color: 'white'}} 
-					selectedIndex={selectedIndex} 
+	        	<ButtonGroup
+					onPress={this._updateSelected}
+					selectedButtonStyle={{backgroundColor: 'maroon'}}
+					selectedTextStyle={{fontFamily:'sans-serif-thin', color: 'white'}}
+					selectedIndex={selectedIndex}
 					buttons={buttons}
 					textStyle={{fontFamily:'sans-serif-thin'}}
 				/>
-				<ListClothes style={{margin:5}}/>
+				<ListClothes style={{margin:5}} data={this.props.dataList} onEachItemPress={this.props.onItemPress}/>
 			</View>
 		)
 	}
