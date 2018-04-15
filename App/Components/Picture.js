@@ -10,13 +10,13 @@ export default class Picture extends React.Component {
   static propTypes = {
 
   }
+
 	constructor(props) {
 		super(props)
 		this.state = {
 			uri: props.imageUrl,
 			key: props.item_id
 		}
-
 		this.height = height/2.5
   }
 
@@ -34,7 +34,6 @@ export default class Picture extends React.Component {
 	  			/>
 			</TouchableHighlight>
 	  	</View>
-
 	  )
     }
 }

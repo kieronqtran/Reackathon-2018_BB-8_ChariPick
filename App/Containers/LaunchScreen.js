@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { ScrollView, Text, Image, View } from 'react-native'
+import { Button, Header } from 'react-native-elements'
 import { ScrollView, Text, Image, View, Alert } from 'react-native'
 import { Button, Header } from 'react-native-elements'
 import { connect } from "react-redux";

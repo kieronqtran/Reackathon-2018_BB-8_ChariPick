@@ -23,8 +23,8 @@ export default class YourClothes extends Component {
 		return(
 			<View>
 				<Header 
-					leftComponent={{icon:'home', color: '#fff'}}
-			        centerComponent={{text: "Your store", style:{ color: '#fff', fontSize:22}}}
+					leftComponent={{icon:'arrow-back', color: '#fff'}}
+			        centerComponent={{text: "Your store", style:{ fontFamily:'sans-serif-dense', color: '#fff', fontSize:22}}}
 			        backgroundColor='maroon'/>
 		        <UserRow/>
 	        	<ButtonGroup 
