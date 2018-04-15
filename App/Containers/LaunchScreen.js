@@ -13,7 +13,7 @@ import PostCloth from '../Components/PostCloth'
 export default class LaunchScreen extends Component {
   render () {
     return (
-      <PostCloth/>
+      <HomePage/>
     )
   }
 }
