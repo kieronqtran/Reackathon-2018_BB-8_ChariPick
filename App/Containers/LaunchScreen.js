@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import { Button, Header } from 'react-native-elements'
-import { connect } from "react-redux";
+import { connect } from "react-redux"
 // import Icon from 'react-native-vector-icons/FontAwesome'
 // Styles
 import ClothListActions from '../Redux/ClothListRedux'
@@ -23,7 +23,7 @@ class LaunchScreen extends Component {
   onPressOfLeftButton = () => {
     this.props.navigation.navigate('InterestedUserScreen')
   }
-
+  
   render () {
     return (
       // !this.props.loading ? <ListClothes data={this.props.data} onEachItemPress={this.onPress}/>: <Text>Loading...</Text>

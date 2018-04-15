@@ -28,7 +28,7 @@ export default class Picture extends React.Component {
 	  return (
 	  	<View style={{flex: 1}}>
 	  		<TouchableHighlight style={{flex:1}} onPress={this.onPress} underlayColor="white">
-	  			<Image
+	  			<Image 
 	  				source={{uri: this.state.uri}}
 	  				style={{flex: 1, height: this.height}}
 	  			/>

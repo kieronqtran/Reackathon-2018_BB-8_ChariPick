@@ -6,6 +6,7 @@ import styles from '../Containers/Styles/LaunchScreenStyles'
 
 export default class ListClothes extends Component {
 
+
 	constructor(props) {
 		super(props)
 		this.state = {
