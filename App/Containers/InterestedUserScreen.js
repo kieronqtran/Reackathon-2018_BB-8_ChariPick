@@ -4,10 +4,9 @@ import { Card, Button, Avatar, Text, Icon } from 'react-native-elements'
 
 import styles from './Styles/InterestedUserStyle'
 
-export default class InterestedUser extends Component {
+export default class InterestedUserScreen extends Component {
   render() {
     return (
-
       <Card>
         <View style={{flexDirection:'row'}}>
           <View justifyContent="center">
