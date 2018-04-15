@@ -30,13 +30,14 @@ class ClothDetailScreen extends Component {
     const { favourite } = this.state;
     const onPressOfLeftButton = this.onPressOfLeftButton.bind(this)
     return (
-      <View>
+      <View style={{flex: 1}}>
         <Header
             leftComponent={{icon:'arrow-back', color: '#fff', onPress: this.onPressOfLeftButton}}
-            centerComponent={{text: "Detail", style:{ fontFamily:'sans-serif-dense', color: '#fff', fontSize:22}}}
+            centerComponent={{text: "Detail", style:{ fontFamily:'sans-serif-condensed', color: '#fff', fontSize:22}}}
             backgroundColor='maroon'/>
         <ScrollView style={styles.container}>
-          <Image source={require('../Images/ignite_logo.png')} style={styles.img} />
+          <Image source={{uri: this.props.data.imageUrl}} style={styles.img} />
+
           <View style={{ flexDirection: 'row'}}>
               <Text style={styles.title}>{this.props.data.name}</Text>
               <View justifyContent="center" style={{ right: 60 }}>
